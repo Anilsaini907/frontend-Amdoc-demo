@@ -130,7 +130,7 @@
                         <div class="form-group">
                             <label for="password">New Password</label>
                             <span><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
-                            <div class="input-group" id="show_hide_password">
+                            <div class="input-group" id="show_hide_passwordnew">
 
                                 <input type="password" class="form-control" id="updatepassword" placeholder="Enter password" required>
                                 <div class="input-group-addon" id="eye-icon">

@@ -1,0 +1,32 @@
+
+.error-message {
+  color: #ff0002;
+ 
+} 
+/* border: 1px solid #CED4DA; */
+span {
+  position: absolute;
+  margin-left: 9px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  color: #4B49AC;
+  z-index: 10;
+ 
+}
+/* color: #495057; */
+input {
+  padding-left: 25px;
+  height: 20px;
+}
+
+#eye-icon {
+  margin-left: 19px;
+  margin-top: 12px;
+}
+
+.btn-block {
+  width: 50% !important;
+  width: fit-content;
+}

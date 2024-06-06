@@ -1,0 +1,16 @@
+
+.error-msg {
+    width: 100%;
+    font-family: "Nunito", sans-serif;
+    font-size: 1rem;
+    color: #ff0002;
+    text-align: center;
+    display: none;
+}
+
+#eye-icon {
+    margin-left: 19px;
+    margin-top: 12px;
+}
+
+

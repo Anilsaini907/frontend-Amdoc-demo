@@ -17,13 +17,8 @@
                 <!-- <img src="images/logo.svg" alt="logo"> -->
                 <img src="images/amdocs-logo.png" alt="logo">
               </div>
-
-
-
               <h4>Hello! let's get started</h4>
               <h6 class="font-weight-light">Sign in to continue.</h6>
-
-
               <form class="pt-3">
                 <div id="divusernameError">
                   <p class="error-message" id="usernameError"></p>

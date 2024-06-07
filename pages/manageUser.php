@@ -62,19 +62,19 @@
                         <div class="form-group">
 
                             <label for="username">Username</label>
-                            <div class="input-group">
+                            <!-- <div class="input-group"> -->
                                 <input type="text" class="form-control" id="useremail" placeholder="Enter username" required>
-                                <div class="input-group-addon" id="eye-icon">
+                                <!-- <div class="input-group-addon" id="eye-icon">
                                     <a href=""><i style="color:#4B49AC;visibility:hidden;" class="fa fa-eye-slash" aria-hidden="true"></i></a>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="form-group" id="passwordDiv">
                             <label for="password">Password</label>
                             <span><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
 
-                            <div class="input-group" id="show_hide_password">
-                                <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                            <div class="input-group" id="show_hide_password" style=" border: 1px solid #CED4DA;">
+                                <input type="password" style="border:none" class="form-control" id="password" placeholder="Enter password" required>
                                 <div class="input-group-addon" id="eye-icon">
                                     <a href=""><i style="color:#4B49AC;" class="fa fa-eye-slash" aria-hidden="true"></i></a>
                                 </div>
@@ -82,15 +82,15 @@
                         </div>
                         <div class="form-group">
                             <label for="role">Role</label>
-                            <div class="input-group">
+                            <!-- <div class="input-group"> -->
                                 <select class="form-control" id="role">
                                     <option value="1">Admin</option>
                                     <option value="2">User</option>
                                 </select>
-                                <div class="input-group-addon" id="eye-icon">
+                                <!-- <div class="input-group-addon" id="eye-icon">
                                     <a href=""><i style="color:#4B49AC;visibility:hidden;" class="fa fa-eye-slash" aria-hidden="true"></i></a>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </form>
                 </div>
@@ -119,20 +119,20 @@
                     <form>
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <div class="input-group">
+                            <!-- <div class="input-group"> -->
                                 <input type="text" class="form-control" disabled id="updatepassuseremail" placeholder="Enter username" required>
-                                <div class="input-group-addon" id="eye-icon">
+                                <!-- <div class="input-group-addon" id="eye-icon">
                                     <a href=""><i style="color:#4B49AC; visibility:hidden;" class="fa fa-eye-slash" aria-hidden="true"></i></a>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
 
                         <div class="form-group">
                             <label for="password">New Password</label>
                             <span><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
-                            <div class="input-group" id="show_hide_passwordnew">
+                            <div class="input-group" id="show_hide_passwordnew" style=" border: 1px solid #CED4DA;">
 
-                                <input type="password" class="form-control" id="updatepassword" placeholder="Enter password" required>
+                                <input type="password" style="border:none" class="form-control" id="updatepassword" placeholder="Enter password" required>
                                 <div class="input-group-addon" id="eye-icon">
                                     <a href=""><i style="color:#4B49AC;" class="fa fa-eye-slash" aria-hidden="true"></i></a>
                                 </div>
@@ -142,21 +142,21 @@
 
                         <div class="form-group">
                             <label for="role">Role</label>
-                            <div class="input-group">
+                            <!-- <div class="input-group"> -->
                                 <select class="form-control" id="updatepassrole" disabled>
                                     <option value="1">Admin</option>
                                     <option value="2">User</option>
                                 </select>
-                                <div class="input-group-addon" id="eye-icon">
+                                <!-- <div class="input-group-addon" id="eye-icon">
                                     <a href=""><i style="color:#4B49AC; visibility:hidden;" class="fa fa-eye-slash" aria-hidden="true"></i></a>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    <button id="editBtnpass" style="background-color: #4B49AC;border-color: #4B49AC;" type="button" class="btn btn-success" onclick="updatePassUser()">Update Password</button>
+                    <button id="editBtnpass" style="background-color: #4B49AC;border-color: #4B49AC;" type="button" class="btn btn-success" onclick="updatePassUser()">Update User</button>
 
                 </div>
             </div>
@@ -355,32 +355,7 @@
                                     <h6 class="font-weight-normal mb-0">All systems are running smoothly!</h6>
                                 </div>
                                 <div class="col-12 col-xl-4">
-                                    <div class="justify-content-end d-flex">
-                                        <!-- <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
-                    <button class="btn btn-sm btn-light bg-white dropdown-toggle" type="button" id="dropdownMenuDate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                     <i class="mdi mdi-calendar"></i> Today (10 Jan 2021)
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuDate2">
-                      <a class="dropdown-item" href="#">January - March</a>
-                      <a class="dropdown-item" href="#">March - June</a>
-                      <a class="dropdown-item" href="#">June - August</a>
-                      <a class="dropdown-item" href="#">August - November</a>
-                    </div>
-                  </div> -->
-                                        <!-- <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span style="background: #4B49AC;" class="input-group-text">
-                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                </span>
-                                            </div>
-                                            <input type="text" class="form-control float-right  d-inline" name="" id="daterange">
-                                            <div class="ml-2 d-inline">
-                                                <button id="filterForm" type="button" class="btn btn-block btn-primary d-inline">Filter</button>
-                                            </div>
-                                            <div class="ml-2 d-inline">
-                                                <button id="resetForm" type="button" class="btn btn-block btn-primary d-inline">Reset</button>
-                                            </div>
-                                        </div> -->
+                                    <div class="justify-content-end d-flex">                                  
                                     </div>
                                 </div>
                             </div>
@@ -399,10 +374,6 @@
                                             Add user
                                         </button>
                                     </div>
-
-
-
-
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="table-responsive">

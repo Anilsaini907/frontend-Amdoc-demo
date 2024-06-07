@@ -1,6 +1,6 @@
 
         #eye-icon {
-            margin-left: 19px;
+            margin-right: 14px;
             margin-top: 12px;
         }
         .dataTables_wrapper .dataTables_paginate .paginate_button {
@@ -11,4 +11,8 @@
             border: 1px solid #4B49AC !important;
             background: #4B49AC !important;
         }
-  
+        table.dataTable thead th{
+            padding: 10px 10px !important;
+            /* padding: 10px 18px; */
+            border-bottom: 1px solid #111;
+          }

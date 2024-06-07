@@ -17,6 +17,7 @@
                 <!-- <img src="images/logo.svg" alt="logo"> -->
                 <img src="images/amdocs-logo.png" alt="logo">
               </div>
+
               <h4>Hello! let's get started</h4>
               <h6 class="font-weight-light">Sign in to continue.</h6>
               <form class="pt-3">
@@ -25,12 +26,12 @@
                 </div>
                 <div class="form-group">
                   <span><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
-                  <div class="input-group">
+                  <!-- <div class="input-group"> -->
                     <input type="email" class="form-control form-control-lg" id="username" onchange="handleChangeusername(this)" placeholder="Username">
-                    <div class="input-group-addon" id="eye-icon">
+                    <!-- <div class="input-group-addon" id="eye-icon">
                       <a href=""><i style="color:#4B49AC; visibility:hidden;" class="fa fa-eye-slash" aria-hidden="true"></i></a>
-                    </div>
-                  </div>
+                    </div> -->
+                  <!-- </div> -->
                 </div>
 
 
@@ -39,15 +40,16 @@
                 </div>
                 <div class="form-group">
                   <span><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
-                  <div class="input-group" id="show_hide_password">
-                    <input type="password" class="form-control form-control-lg" id="password" onchange="handleChangePasswrd(this)" placeholder="Password">
+                  <div class="input-group" id="show_hide_password" style=" border: 1px solid #CED4DA;">
+                    <input type="password" style="border:none" class="form-control form-control-lg" id="password" onchange="handleChangePasswrd(this)" placeholder="Password">
                     <div class="input-group-addon" id="eye-icon">
                       <a href=""><i style="color:#4B49AC;" class="fa fa-eye-slash" aria-hidden="true"></i></a>
                     </div>
                   </div>
                 </div>
-                <div style="display: flex;align-items: center;justify-content: center;" class="mt-3">
-                  <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" onClick="login()">SIGN IN</a>
+                <div  class="mt-3">
+                  <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" 
+                  onClick="login()">SIGN IN</a>
                 </div>
                 <!-- <div class="my-2 d-flex justify-content-between align-items-center">
                   <div class="form-check">

@@ -30,3 +30,8 @@
    /* W3C */
 } 
 
+table.dataTable thead th{
+  padding: 10px 9px !important;
+  /* padding: 10px 18px; */
+  border-bottom: 1px solid #111;
+}

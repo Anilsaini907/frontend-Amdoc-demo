@@ -200,7 +200,7 @@
                                                 <label for="oldPassword" class="font-weight-bold">Old Password</label>
                                                 <span><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
                                                 <div class="input-group" id="show_hide_password" style=" border: 1px solid #CED4DA;">
-                                                    <input type="password" style="border:none" class="form-control form-control-lg" id="oldPassword" placeholder="Old Password" required>
+                                                    <input type="password" style="border:none" class="form-control " id="oldPassword" placeholder="Old Password" required>
 
                                                     <div class="input-group-addon" id="eye-icon">
                                                         <a href=""><i style="color:#4B49AC;" class="fa fa-eye-slash" aria-hidden="true"></i></a>

@@ -341,7 +341,7 @@
                    
                 </div>
             </div> -->
-            <!-- partial -->
+          
             <!-- partial:partials/_sidebar.html -->
             <?php include "../partials/sidebar.php"; ?>
             <!-- partial -->

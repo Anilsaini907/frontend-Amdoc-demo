@@ -171,6 +171,7 @@
       });
   }
     $(document).ready(function() {
+        $("#overlay").fadeIn(300);
         checkAuthrization();
           manageuserAuth();
           passwordShowhide();
@@ -188,7 +189,11 @@
                 var table = $('#example1').DataTable();
                 table.rows.add(data).draw();
             }
-        });
+        }).done(function() {
+            setTimeout(function(){
+              $("#overlay").fadeOut(300);
+            },500);
+          });
 
         // Initialize DataTable
         var table = $('#example1').DataTable({

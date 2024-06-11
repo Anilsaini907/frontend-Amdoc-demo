@@ -203,6 +203,7 @@ function bindTableByNameAndDate(jsonDate) {
 }
 
 function ajaxCall(startDate, endDate) {
+  $("#overlay").fadeIn(300);　
   $.ajax({
     url: `${apiUrl}/kpi_data.php?p_DataRequest=TechUsage_ByName&p_startDate=${startDate}&p_endDate=${endDate}`, // PHP file to send the request
     type: "GET",
@@ -234,6 +235,10 @@ function ajaxCall(startDate, endDate) {
     error: function (xhr, status, error) {
       console.error(error); // Log any errors to the console
     },
+  }).done(function() {
+    setTimeout(function(){
+      $("#overlay").fadeOut(300);
+    },500);
   });
 }
 function checkAuthrization() {

@@ -15,6 +15,10 @@ function GetUserProfileData() {
         document.getElementById("oldpasswordhidden").value = response.data[0].password;
       };
     }
+  }).done(function() {
+    setTimeout(function(){
+      $("#overlay").fadeOut(300);
+    },500);
   });
 }
 
@@ -75,6 +79,7 @@ function updateprofile() {
 }
 
 $(document).ready(function() {
+  $("#overlay").fadeIn(300);
   checkAuthrization();
   GetUserProfileData();
 

@@ -3,6 +3,7 @@
 </head>
 
 <body>
+<?php include "../pages/loader.php" ;?>
     <!-- modal -->
     <div class="modal fade" id="sign-out">
         <div class="modal-dialog">

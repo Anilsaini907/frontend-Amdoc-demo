@@ -5,7 +5,7 @@
     <?php include "../partials/headmetaPage/metahead.php"; ?>
     
 </head>
-
+<?php include "../pages/loader.php" ;?>
 <body>
     <!-- modal -->
     <div class="modal fade" id="sign-out">
@@ -52,7 +52,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Change Role</h5>
+                    <h5 class="modal-title" id="loginModalLabel">Add User</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -110,7 +110,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Change password</h5>
+                    <h5 class="modal-title" id="loginModalLabel">Update User</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

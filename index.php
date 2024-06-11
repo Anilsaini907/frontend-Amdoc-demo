@@ -1,6 +1,6 @@
 
-
 <?php include "partials/headmetaPage/metahead.php"; ?>
+<?php include "pages/loader.php" ;?>
 <link rel="stylesheet" href="http://localhost/skydash/css/index.css">
 </head>
 <body>

@@ -5,17 +5,36 @@
     <div class="container-fluid page-body-wrapper full-page-wrapper">
       <div class="content-wrapper d-flex align-items-center auth px-0">
         <div class="row w-100 mx-0">
-          <div class="col-lg-4 mx-auto">
-            <div class="alert alert-success mb-3" id="loginSuccessMessage" style="display: none; width:100%;margin:0 auto;">
-              <h5>You are successfully logged in !</h5>
+  <div class="col-lg-4 mx-auto">
+  <!-- Toaster message -->
+  <div class="toast" id="updateToast" data-delay="3000" style="position: absolute;z-index:100;
+  top: 0;right: 13px;">
+  <div class="toast-header">
+    <strong class="mr-auto">Login Status</strong>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+  </div>
+  <div class="toast-body">
+    <!-- Message will be injected here -->
+  </div>
+</div>
+<!-- Toaster message End -->
+
+<!-- login status error div -->
+            <div class="alert alert-success mb-3" id="loginSuccessMessage"
+             style="display: none; width:100%;margin:0 auto;border-radius:14px;">
+              <h5 >You are successfully logged in !</h5>
             </div>
-            <div class="alert alert-danger mb-3" id="loginFailureMessage" style="display: none;width:100%;margin:0 auto;">
+            <div class="alert alert-danger mb-3" id="loginFailureMessage" 
+            style="display: none;width:100%;margin:0 auto;border-radius:14px;">
               <h5>Login Failed,Enter Wrong Username or password.</h5>
             </div>
+<!-- login status error div End-->
+
             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
               <div class="brand-logo">
                 <!-- <img src="images/logo.svg" alt="logo"> -->
-                <img src="images/amdocs-logo.png" alt="logo">
+                <img style="background: #4B49AC;padding: 13px;
+                border-radius: 22px" src="images/amdocs-logo.png" alt="logo">
               </div>
 
               <h4>Hello! let's get started</h4>
@@ -77,7 +96,8 @@
     <!-- content-wrapper ends -->
   </div>
  
-  </div>
+ 
+</div>
 
   <script src="vendors/js/vendor.bundle.base.js"></script>
   <script src="js/off-canvas.js"></script>

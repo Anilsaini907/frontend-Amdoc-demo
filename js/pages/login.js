@@ -33,7 +33,8 @@ function login() {
         success: function(response) {
         //  console.log(response);
           if (response.data[0]['NULL'] === null) {
-            document.getElementById('loginFailureMessage').style.display = 'block';
+            // document.getElementById('loginFailureMessage').style.display = 'block';
+            showToast('Login Failed,Enter Wrong Username or password.', false);
             setTimeout(function() {
               document.getElementById('loginFailureMessage').style.display = 'none';
               window.location.href = "http://localhost/skydash/login.php";
@@ -41,10 +42,11 @@ function login() {
           }
           else if(response.data[0]) {
           sessionStorage.setItem("IS_VALID", JSON.stringify(response.data[0]));
+          showToast('You are logged in successfully!', true);
             // Encrypt and store data in sessionStorage
             // const encryptedData = encryptData(response.data[0], encryptionKey);
             // sessionStorage.setItem('IS_VALID', encryptedData);
-            document.getElementById('loginSuccessMessage').style.display = 'block';
+            // document.getElementById('loginSuccessMessage').style.display = 'block';
             setTimeout(function() {
               window.location.href = "http://localhost/skydash/index.php";
               document.getElementById('loginSuccessMessage').style.display = 'none';
@@ -81,8 +83,22 @@ function login() {
     }  
    
 }
+function showToast(message, isSuccess) {
+  var toastBody = $('#updateToast .toast-body');
+  toastBody.text(message);
+
+  var toast = $('#updateToast');
+  if (isSuccess) {
+    toastBody.removeClass('text-danger').addClass('text-success');
+  } else {
+    toastBody.removeClass('text-success').addClass('text-danger');
+  }
+
+  toast.toast('show');
+}
  $(document).ready(function() {      
   checkAuthrization(); 
+ 
   $("#show_hide_password a").on('click', function(event) {
     event.preventDefault();
     if($('#show_hide_password input').attr("type") == "text"){
@@ -95,6 +111,7 @@ function login() {
         $('#show_hide_password i').addClass( "fa-eye" );
     }
 });
+
 
 });
 

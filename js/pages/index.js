@@ -175,8 +175,7 @@ function bindTableByNameAndDate(jsonDate) {
   var dataTable = $("#example").DataTable({
     data: data,
   "lengthMenu": [ [5, 10, 20, 100], [5, 10, 20, 100] ],
- 
-    // bDestroy: true,
+    bDestroy: true,
     // paging: true,
     // lengthChange: false,
     //searching: false,

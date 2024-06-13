@@ -4,8 +4,12 @@
         <!-- <a class="navbar-brand brand-logo mr-5" href="http://localhost/skydash/index.php"><img src="http://localhost/skydash/images/logo.svg" class="mr-2" alt="logo"/></a>
         <a class="navbar-brand brand-logo-mini" href="http://localhost/skydash/index.php"><img src="http://localhost/skydash/images/logo-mini.svg" alt="logo"/></a>
          -->
-        <a class="navbar-brand brand-logo mr-5" href="http://localhost/skydash/index.php"><img src="http://localhost/skydash/images/amdocs-logo.png" class="mr-2" alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="http://localhost/skydash/index.php"><img src="http://localhost/skydash/images/amdoc.jpg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo mr-5" href="http://localhost/skydash/index.php">
+          <img style="background: #4B49AC;
+    padding: 7px;
+    border-radius: 11px" src="http://localhost/skydash/images/amdocs-logo.png" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="http://localhost/skydash/index.php">
+          <img src="http://localhost/skydash/images/amdoc-bluebg.jpg" alt="logo"/></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -74,7 +78,7 @@
           </li> -->
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="http://localhost/skydash/images/amdoc.jpg" id="username" alt="profile"/>
+              <img  src="http://localhost/skydash/images/amdoc.jpg" id="username" alt="profile"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
               <!-- <a class="dropdown-item">

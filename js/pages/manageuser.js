@@ -1,4 +1,44 @@
+  function showManageUserToast(message, isSuccess) {
+    var toastBody = $('#addToast .toast-body');
+    toastBody.text(message);
+  
+    var toast = $('#addToast');
+    if (isSuccess) {
+      toastBody.removeClass('text-danger').addClass('text-success');
+    } else {
+      toastBody.removeClass('text-success').addClass('text-danger');
+    }
+  
+    toast.toast('show');
+  }
 
+  function showManageUserupdatepassToast(message, isSuccess) {
+    var toastBody = $('#updatepassToast .toast-body');
+    toastBody.text(message);
+  
+    var toast = $('#updatepassToast');
+    if (isSuccess) {
+      toastBody.removeClass('text-danger').addClass('text-success');
+    } else {
+      toastBody.removeClass('text-success').addClass('text-danger');
+    }
+  
+    toast.toast('show');
+  }
+  function showManageUserdeleteToast(message, isSuccess) {
+    var toastBody = $('#userdeleteToast .toast-body');
+    toastBody.text(message);
+  
+    var toast = $('#userdeleteToast');
+    if (isSuccess) {
+        toastBody.removeClass('text-success').addClass('text-danger');
+     
+    } else {
+        toastBody.removeClass('text-danger').addClass('text-success');
+    }
+  
+    toast.toast('show');
+  }
     function updateAddvalue(){
     const inputElement = document.getElementById("useremail");
     inputElement.disabled = false;
@@ -13,8 +53,6 @@
         var password = document.getElementById("password").value;
         var selectElement = document.getElementById("role");
         var roleid = selectElement.value;
-
-   
         var dataJson = JSON.stringify({
             data_request: "add",
             id: 0,
@@ -30,6 +68,7 @@
             success: function(response) {
                // console.log("response", response);
                 if (response.status === "true") {
+                    showManageUserToast('User Added Sucessfully!', true);
                     setTimeout(function() {
                         window.location.reload();
                     }, 2000);
@@ -60,6 +99,7 @@
             success: function(response) {
                 //console.log("response", response);
                 if (response.status === "true") {
+                    // showManageUserToast('User Updated Sucessfully!', true);
                     setTimeout(function() {
                         window.location.reload();
                     }, 2000);
@@ -75,8 +115,6 @@
         var password = document.getElementById("updatepassword").value;
         var selectElement = document.getElementById("updatepassrole");
         var roleid = selectElement.value;
-
-      
         var dataJson = JSON.stringify({
             data_request: "updatePassword",
             id: id,
@@ -92,6 +130,7 @@
             success: function(response) {
                 //console.log("response", response);
                 if (response.status === "true") {
+                    showManageUserupdatepassToast('User Password Updated Sucessfully!', true);
                     setTimeout(function() {
                         window.location.reload();
                     }, 2000);
@@ -103,8 +142,6 @@
 
     function deleteUser() {
         var id = document.getElementById("deleteBtn").value;
-        //console.log("delete", id);
-       
         var dataJson = JSON.stringify({
             data_request: "delete",
             id: id,
@@ -118,8 +155,9 @@
             url: `${apiUrl}/manageuser.php`,
             data: dataJson,
             success: function(response) {
-                //console.log("response", response);
+                console.log("delet response", response);
                 if (response.status === "true") {
+                    showManageUserdeleteToast('User Removed Sucessfully!', true);
                     setTimeout(function() {
                         window.location.reload();
                     }, 2000);

@@ -1,11 +1,11 @@
+<link rel="stylesheet" href="../vendors/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../vendors/mdi/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="http://localhost/skydash/css/manageuser.css">
+<?php include "../partials/headmetaPage/metahead.php"; ?>
 
-    <link rel="stylesheet" href="../vendors/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="http://localhost/skydash/css/manageuser.css">
-    <?php include "../partials/headmetaPage/metahead.php"; ?>
-    
 </head>
-<?php include "../pages/loader.php" ;?>
+<?php include "../pages/loader.php"; ?>
+
 <body>
     <!-- modal -->
     <div class="modal fade" id="sign-out">
@@ -31,6 +31,17 @@
     <div class="modal fade" id="deleteuser">
         <div class="modal-dialog">
             <div class="modal-content">
+                <!-- Toaster message -->
+                <div class="toast" id="userdeleteToast" data-delay="3000" style="position: absolute;z-index:100;right: 35px;">
+                    <div class="toast-header">
+                        <strong class="mr-auto">User Status</strong>
+                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                    </div>
+                    <div class="toast-body">
+                        <!-- Message will be injected here -->
+                    </div>
+                </div>
+                <!-- Toaster message End -->
                 <div class="modal-header">
                     <h4 class="modal-title">Are you sure Want to Delete?</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -40,7 +51,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" style="background-color: #4B49AC;    border-color: #4B49AC;" class="btn btn-success" data-dismiss="modal">Cancel</button>
-                    <button id="deleteBtn" type="button" class="btn btn-danger" data-dismiss="modal" onclick="deleteUser()">Delete</button>
+                    <button id="deleteBtn" type="button" class="btn btn-danger"  onclick="deleteUser()">Delete</button>
                 </div>
             </div>
         </div>
@@ -51,6 +62,18 @@
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
+                <!-- Toaster message -->
+                <div class="toast" id="addToast" data-delay="3000" style="position: absolute;z-index:100;right: 35px;">
+                    <div class="toast-header">
+                        <strong class="mr-auto">User Status</strong>
+                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                    </div>
+                    <div class="toast-body">
+                        <!-- Message will be injected here -->
+                    </div>
+                </div>
+                <!-- Toaster message End -->
+
                 <div class="modal-header">
                     <h5 class="modal-title" id="loginModalLabel">Add User</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -63,8 +86,8 @@
 
                             <label for="username">Username</label>
                             <!-- <div class="input-group"> -->
-                                <input type="text" class="form-control" id="useremail" placeholder="Enter username" required>
-                                <!-- <div class="input-group-addon" id="eye-icon">
+                            <input type="text" class="form-control" id="useremail" placeholder="Enter username" required>
+                            <!-- <div class="input-group-addon" id="eye-icon">
                                     <a href=""><i style="color:#4B49AC;visibility:hidden;" class="fa fa-eye-slash" aria-hidden="true"></i></a>
                                 </div>
                             </div> -->
@@ -83,11 +106,11 @@
                         <div class="form-group">
                             <label for="role">Role</label>
                             <!-- <div class="input-group"> -->
-                                <select class="form-control" id="role">
-                                    <option value="1">Admin</option>
-                                    <option value="2">User</option>
-                                </select>
-                                <!-- <div class="input-group-addon" id="eye-icon">
+                            <select class="form-control" id="role">
+                                <option value="1">Admin</option>
+                                <option value="2">User</option>
+                            </select>
+                            <!-- <div class="input-group-addon" id="eye-icon">
                                     <a href=""><i style="color:#4B49AC;visibility:hidden;" class="fa fa-eye-slash" aria-hidden="true"></i></a>
                                 </div>
                             </div> -->
@@ -109,6 +132,17 @@
     <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
+                <!-- Toaster message -->
+                <div class="toast" id="updatepassToast" data-delay="3000" style="position: absolute;z-index:100;right: 35px;">
+                    <div class="toast-header">
+                        <strong class="mr-auto">User Status</strong>
+                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                    </div>
+                    <div class="toast-body">
+                        <!-- Message will be injected here -->
+                    </div>
+                </div>
+                <!-- Toaster message End -->
                 <div class="modal-header">
                     <h5 class="modal-title" id="loginModalLabel">Update User</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -120,8 +154,8 @@
                         <div class="form-group">
                             <label for="username">Username</label>
                             <!-- <div class="input-group"> -->
-                                <input type="text" class="form-control" disabled id="updatepassuseremail" placeholder="Enter username" required>
-                                <!-- <div class="input-group-addon" id="eye-icon">
+                            <input type="text" class="form-control" disabled id="updatepassuseremail" placeholder="Enter username" required>
+                            <!-- <div class="input-group-addon" id="eye-icon">
                                     <a href=""><i style="color:#4B49AC; visibility:hidden;" class="fa fa-eye-slash" aria-hidden="true"></i></a>
                                 </div>
                             </div> -->
@@ -143,11 +177,11 @@
                         <div class="form-group">
                             <label for="role">Role</label>
                             <!-- <div class="input-group"> -->
-                                <select class="form-control" id="updatepassrole" disabled>
-                                    <option value="1">Admin</option>
-                                    <option value="2">User</option>
-                                </select>
-                                <!-- <div class="input-group-addon" id="eye-icon">
+                            <select class="form-control" id="updatepassrole" disabled>
+                                <option value="1">Admin</option>
+                                <option value="2">User</option>
+                            </select>
+                            <!-- <div class="input-group-addon" id="eye-icon">
                                     <a href=""><i style="color:#4B49AC; visibility:hidden;" class="fa fa-eye-slash" aria-hidden="true"></i></a>
                                 </div>
                             </div> -->
@@ -341,7 +375,7 @@
                    
                 </div>
             </div> -->
-          
+
             <!-- partial:partials/_sidebar.html -->
             <?php include "../partials/sidebar.php"; ?>
             <!-- partial -->
@@ -355,7 +389,7 @@
                                     <h6 class="font-weight-normal mb-0">All systems are running smoothly!</h6>
                                 </div>
                                 <div class="col-12 col-xl-4">
-                                    <div class="justify-content-end d-flex">                                  
+                                    <div class="justify-content-end d-flex">
                                     </div>
                                 </div>
                             </div>
@@ -363,6 +397,7 @@
                     </div>
 
                     <div class="row">
+
                         <div class="col-md-12 grid-margin stretch-card">
                             <div class="card">
                                 <div class="card-body ">
@@ -421,7 +456,7 @@
     <!-- plugins:js -->
     <script src="../vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
-    
+
     <script src="../vendors/chart.js/Chart.min.js"></script>
 
     <!-- End plugin js for this page -->

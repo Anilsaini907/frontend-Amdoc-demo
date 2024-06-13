@@ -21,22 +21,25 @@ function GetUserProfileData() {
     },500);
   });
 }
+function showProfileToast(message, isSuccess) {
+  var toastBody = $('#updateToast .toast-body');
+  toastBody.text(message);
 
+  var toast = $('#updateToast');
+  if (isSuccess) {
+    toastBody.removeClass('text-danger').addClass('text-success');
+  } else {
+    toastBody.removeClass('text-success').addClass('text-danger');
+  }
+
+  toast.toast('show');
+}
 
 $('#profileForm').submit(function(event) {
-    event.preventDefault();
+  event.preventDefault();
   var oldPassword = document.getElementById("oldPassword").value;
   var oldPasswordhidden = document.getElementById("oldpasswordhidden").value;
   var password = document.getElementById("newPassword").value;
- // console.log("out",oldPassword, oldPasswordhidden);
-//  if(oldPassword === " " || password ===" "){
-//   console.log("if ",oldPassword, password);
-//   $(".error-msg").html("Both Old password and New password required").show();
-//   setTimeout(function(){
-//     $(".error-msg").html(" ").hide();
-//   }, 3000);
-//  }
-//   else
    if (oldPassword !== oldPasswordhidden) {
     console.log("if else",oldPassword, oldPasswordhidden);
     $(".error-msg").html("Old password does not matched").show();
@@ -45,7 +48,6 @@ $('#profileForm').submit(function(event) {
     }, 2000); 
   }
   else {
-   // console.log("else",oldPassword, oldPasswordhidden);
     $(".error-msg").html(" ").hide();
     updateprofile();}
   });
@@ -72,7 +74,8 @@ function updateprofile() {
         $('#profileForm')[0].reset();
 
         GetUserProfileData();
-        alert("Your Password has been updated");
+        showProfileToast('Your Profile updated Sucessfully!', true);
+       
       };
     }
   });

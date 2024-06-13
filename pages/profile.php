@@ -175,7 +175,20 @@
                         </div>
                     </div>
 
+
+
                     <div class="row">
+<!-- Toaster message -->
+  <div class="toast" id="updateToast" data-delay="3000" style="position: absolute;z-index:100;right: 35px;">
+  <div class="toast-header">
+    <strong class="mr-auto">Profile Status</strong>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+  </div>
+  <div class="toast-body">
+    <!-- Message will be injected here -->
+  </div>
+</div>
+<!-- Toaster message End -->
                         <div class="col-md-12 grid-margin stretch-card">
                             <div class="card">
                                 <div class="card-body ">

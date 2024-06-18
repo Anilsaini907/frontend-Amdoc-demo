@@ -1,6 +1,4 @@
 
-
-
 function login() {
   event.preventDefault();
   $('.error-message').text('');
@@ -31,22 +29,19 @@ function login() {
         url: `${apiUrl}/login.php`,
         data: dataJson,
         success: function(response) {
-        //  console.log(response);
           if (response.data[0]['NULL'] === null) {
             // document.getElementById('loginFailureMessage').style.display = 'block';
-            showToast('Login Failed,Enter Wrong Username or password.', false);
+            // showToast('Please Enter Correct Username or password.', false);
+            showToast('You have entered an invalid username or password.', false);
+            // showToast('Login Failed.', false);
             setTimeout(function() {
-              document.getElementById('loginFailureMessage').style.display = 'none';
+              // document.getElementById('loginFailureMessage').style.display = 'none';
               window.location.href = "http://localhost/skydash/login.php";
             }, 2000);
           }
           else if(response.data[0]) {
           sessionStorage.setItem("IS_VALID", JSON.stringify(response.data[0]));
           showToast('You are logged in successfully!', true);
-            // Encrypt and store data in sessionStorage
-            // const encryptedData = encryptData(response.data[0], encryptionKey);
-            // sessionStorage.setItem('IS_VALID', encryptedData);
-            // document.getElementById('loginSuccessMessage').style.display = 'block';
             setTimeout(function() {
               window.location.href = "http://localhost/skydash/index.php";
               document.getElementById('loginSuccessMessage').style.display = 'none';
@@ -54,8 +49,11 @@ function login() {
 
           }
           
-
         }
+        //,
+        // error: function(xhr, status, error) {
+        //   showToast('Failed to update user: ' + xhr.responseText, false);
+        // }
       });
     
 
@@ -98,7 +96,6 @@ function showToast(message, isSuccess) {
 }
  $(document).ready(function() {      
   checkAuthrization(); 
- 
   $("#show_hide_password a").on('click', function(event) {
     event.preventDefault();
     if($('#show_hide_password input').attr("type") == "text"){
@@ -111,8 +108,6 @@ function showToast(message, isSuccess) {
         $('#show_hide_password i').addClass( "fa-eye" );
     }
 });
-
-
 });
 
 
